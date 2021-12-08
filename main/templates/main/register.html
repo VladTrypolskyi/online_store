@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+
+{% block title %} Registration {% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="container py-2">
+    <h1> Registration </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div> class "d-grid gap-2"
+            <button type="submit" class="btn btn-primary">Registration</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
